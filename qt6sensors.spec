@@ -6,17 +6,16 @@
 # autospec commit: c02b2fe
 #
 Name     : qt6sensors
-Version  : 6.6.2
-Release  : 12
-URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtsensors-everywhere-src-6.6.2.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtsensors-everywhere-src-6.6.2.tar.xz
+Version  : 6.6.3
+Release  : 13
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtsensors-everywhere-src-6.6.3.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtsensors-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0
 Requires: qt6sensors-lib = %{version}-%{release}
 Requires: qt6sensors-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
-BuildRequires : mesa-dev
 BuildRequires : pkg-config
 BuildRequires : qt6base-dev
 BuildRequires : qt6declarative-dev
@@ -56,15 +55,15 @@ license components for the qt6sensors package.
 
 
 %prep
-%setup -q -n qtsensors-everywhere-src-6.6.2
-cd %{_builddir}/qtsensors-everywhere-src-6.6.2
+%setup -q -n qtsensors-everywhere-src-6.6.3
+cd %{_builddir}/qtsensors-everywhere-src-6.6.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711166533
+export SOURCE_DATE_EPOCH=1711487198
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -125,7 +124,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711166533
+export SOURCE_DATE_EPOCH=1711487198
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6sensors
 cp %{_builddir}/qtsensors-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6sensors/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -149,25 +148,25 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtSensors/6.6.2/QtSensors/private/qaccelerometer_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qambientlightsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qambienttemperaturesensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qcompass_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qgyroscope_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qhumiditysensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qirproximitysensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qlidsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qlightsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qmagnetometer_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qorientationsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qpressuresensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qproximitysensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qrotationsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qtapsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qtiltsensor_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/qtsensors-config_p.h
-/usr/include/QtSensors/6.6.2/QtSensors/private/sensorlog_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qaccelerometer_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qambientlightsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qambienttemperaturesensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qcompass_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qgyroscope_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qhumiditysensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qirproximitysensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qlidsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qlightsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qmagnetometer_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qorientationsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qpressuresensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qproximitysensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qrotationsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qtapsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qtiltsensor_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/qtsensors-config_p.h
+/usr/include/QtSensors/6.6.3/QtSensors/private/sensorlog_p.h
 /usr/include/QtSensors/QAccelerometer
 /usr/include/QtSensors/QAccelerometerFilter
 /usr/include/QtSensors/QAccelerometerReading
@@ -251,27 +250,27 @@ popd
 /usr/include/QtSensors/qtsensors-config.h
 /usr/include/QtSensors/qtsensorsexports.h
 /usr/include/QtSensors/qtsensorsversion.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlaccelerometer_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlambientlightsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlambienttemperaturesensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlcompass_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlgyroscope_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlhumiditysensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlirproximitysensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmllidsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmllightsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlmagnetometer_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlorientationsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlpressuresensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlproximitysensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlrotationsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlsensorglobal_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmlsensorrange_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmltapsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qmltiltsensor_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qsensorsquickglobal_p.h
-/usr/include/QtSensorsQuick/6.6.2/QtSensorsQuick/private/qtsensorsquickexports_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlaccelerometer_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlambientlightsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlambienttemperaturesensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlcompass_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlgyroscope_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlhumiditysensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlirproximitysensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmllidsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmllightsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlmagnetometer_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlorientationsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlpressuresensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlproximitysensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlrotationsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlsensorglobal_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmlsensorrange_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmltapsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qmltiltsensor_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qsensorsquickglobal_p.h
+/usr/include/QtSensorsQuick/6.6.3/QtSensorsQuick/private/qtsensorsquickexports_p.h
 /usr/include/QtSensorsQuick/QtSensorsQuick
 /usr/include/QtSensorsQuick/QtSensorsQuickDepends
 /usr/include/QtSensorsQuick/QtSensorsQuickVersion
@@ -327,15 +326,15 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libQt6Sensors.so.6.6.2
-/V3/usr/lib64/libQt6SensorsQuick.so.6.6.2
+/V3/usr/lib64/libQt6Sensors.so.6.6.3
+/V3/usr/lib64/libQt6SensorsQuick.so.6.6.3
 /V3/usr/lib64/qt6/plugins/sensors/libqtsensors_generic.so
 /V3/usr/lib64/qt6/plugins/sensors/libqtsensors_iio-sensor-proxy.so
 /V3/usr/lib64/qt6/qml/QtSensors/libsensorsquickplugin.so
 /usr/lib64/libQt6Sensors.so.6
-/usr/lib64/libQt6Sensors.so.6.6.2
+/usr/lib64/libQt6Sensors.so.6.6.3
 /usr/lib64/libQt6SensorsQuick.so.6
-/usr/lib64/libQt6SensorsQuick.so.6.6.2
+/usr/lib64/libQt6SensorsQuick.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6sensors_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6sensorsquick_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/Sensors.json
