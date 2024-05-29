@@ -1,3 +1,4 @@
+libQt6Sensors.so.6:NonQt
 libQt6Sensors.so.6:Qt_6
 libQt6Sensors.so.6:Qt_6_PRIVATE_API
 libQt6Sensors.so.6:_ZN10QGyroscope11qt_metacallEN11QMetaObject4CallEiPPv
@@ -504,6 +505,7 @@ libQt6Sensors.so.6:_ZNK7QSensor8dataRateEv
 libQt6Sensors.so.6:_ZNK7QSensor8isActiveEv
 libQt6Sensors.so.6:_ZNK8QCompass10metaObjectEv
 libQt6Sensors.so.6:_ZNK8QCompass7readingEv
+libQt6SensorsQuick.so.6:NonQt
 libQt6SensorsQuick.so.6:Qt_6
 libQt6SensorsQuick.so.6:Qt_6_PRIVATE_API
 libQt6SensorsQuick.so.6:_Z28qml_register_types_QtSensorsv
@@ -1027,6 +1029,7 @@ libQt6SensorsQuick.so.6:_ZNK9QmlSensor15bindableReadingEv
 libQt6SensorsQuick.so.6:_ZNK9QmlSensor15userOrientationEv
 libQt6SensorsQuick.so.6:_ZNK9QmlSensor18availableDataRatesEv
 libQt6SensorsQuick.so.6:_ZNK9QmlSensor18currentOrientationEv
+libQt6SensorsQuick.so.6:_ZNK9QmlSensor18isFeatureSupportedENS_7FeatureE
 libQt6SensorsQuick.so.6:_ZNK9QmlSensor19axesOrientationModeEv
 libQt6SensorsQuick.so.6:_ZNK9QmlSensor19efficientBufferSizeEv
 libQt6SensorsQuick.so.6:_ZNK9QmlSensor20isConnectedToBackendEv
